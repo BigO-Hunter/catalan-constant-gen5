@@ -4,9 +4,8 @@ public import Submission.Refinement.PolynomialNorm
 
 @[expose] public section
 
-/-! Exact rational power coefficients of the GEN-5 witness (MultiAgency
-P-generator, 2026-11-01): per-band Zolotarev interpolation, verified by the
-leader's certificate chain at exponent 528.2327. -/
+/-! Exact rational power coefficients converted from the published degree-130 witness.
+The conversion is recorded by scripts/generate_triangle_data.py. -/
 
 namespace CatalanMeasure.Refinement.Trimmed130
 
@@ -298,7 +297,7 @@ noncomputable def rationalP : ℚ[X] := polynomialFromCoeffs powerCoefficients
 noncomputable def rationalQ : ℚ[X] := polynomialFromCoeffs filteredCoefficients
 noncomputable def realP : ℝ[X] := rationalP.map (algebraMap ℚ ℝ)
 def radius : ℚ := 100000001 / 100000000
-def normCap : ℚ := 18431505967437782021098281523000756538354413632474049483
+def normCap : ℚ := 18427712050797262411822259936073010595679947623960180789
 def filterCap : ℚ := 16385
 def circleCap : ℚ := 1047311 / 20000
 

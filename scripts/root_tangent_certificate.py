@@ -61,7 +61,7 @@ assert abs(slope(centre))*2*r<epsilon
 assert slope(Q(-3,4))>0 and slope(Q(3,4))<0
 minimum_norm=10**10
 assert lc*lc*(r*r-Q(9,16))**130 > minimum_norm**2
-wc=Q('52.18435');exponent=260*wc
+wc=Q('52.184216');exponent=260*wc
 loghi=Q(693147180559945310,10**18)
 
 

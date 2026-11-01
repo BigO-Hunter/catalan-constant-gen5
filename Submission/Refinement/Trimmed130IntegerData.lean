@@ -9,6 +9,8 @@ namespace CatalanMeasure.Refinement.Trimmed130
 
 def coefficientDenominator : ℤ := 10000000000000000000000000000000000000000
 
+theorem coefficientDenominator_pos : 0 < coefficientDenominator := by decide
+
 def integerCoefficients : List ℤ := [
   -30101125424354482846460367929574793547416875771395560737,
   1358768872201711402859566367417161541735265265034335576361,

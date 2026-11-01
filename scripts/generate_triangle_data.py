@@ -9,7 +9,7 @@ from polynomial_circle_certificate import chebyshev_to_power, exp_lower
 
 root = Path(__file__).resolve().parents[1]
 raw = (root / 'certificates/inverse_image_trimmed_130.json').read_bytes()
-assert hashlib.sha256(raw).hexdigest() == 'a7b058160886e396a4f686ab9fc011ba8b3f2baf74197f652c5a8fe8177f03f4'
+assert hashlib.sha256(raw).hexdigest() == 'c580b0f301451825a345606b3a5664b16cc7b1148a07a3fce8330eb61d556f05'
 data = json.loads(raw)
 coefficients = chebyshev_to_power(list(map(Q, data['chebyshev_coefficients'])))
 m, k, ell = 130, 14, 38
