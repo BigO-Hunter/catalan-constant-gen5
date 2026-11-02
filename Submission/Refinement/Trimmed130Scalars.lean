@@ -16,10 +16,10 @@ noncomputable section
 
 def target : ℝ := 28198220921 / 12500000000
 def secondCost : ℝ := 852585263 / 200000000
-def weightCap : ℝ := 52184216 / 1000000
-def weight : ℝ := 52184217 / 1000000
+def weightCap : ℝ := 13045891/250000
+def weight : ℝ := 10436713/200000
 def eta : ℝ := 3004357889 / 100000000
-def bound : ℝ := 5282327 / 10000
+def bound : ℝ := 1056463 / 2000
 def residualCap : ℝ := -883 / 10000
 def nearCap : ℝ := -78145547 / 100000000
 def delta : ℝ := 1 / 10000000000

@@ -12,7 +12,7 @@ modules. Every finite numerical certificate is checked by the Lean kernel.
 
 namespace Race
 
-theorem bound : BigOSpeedrun.Catalan.Bound ((5282327 : ℚ) / 10000) :=
+theorem bound : BigOSpeedrun.Catalan.Bound ((1056463 : ℚ) / 2000) :=
   CatalanMeasure.GenD.Refinement.Trimmed130.verifier_bound_of_decay
     CatalanMeasure.GenD.Refinement.Trimmed130.delta_small
 

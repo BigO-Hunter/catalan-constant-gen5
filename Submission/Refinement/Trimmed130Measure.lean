@@ -55,7 +55,7 @@ theorem verifier_bound_of_decay
       |x - catalan| ≤ Real.exp (-(rho * (N : ℝ))) →
         |aeval x (deltaPoly D58.Odd.design N)| ≤
           Real.exp (-((tDelta - ε) * (N : ℝ) ^ 2))) :
-    BigOSpeedrun.Catalan.Bound ((5282327 : ℚ) / 10000) := by
+    BigOSpeedrun.Catalan.Bound ((1056463 : ℚ) / 2000) := by
   apply CatalanMeasure.Refinement.bound_of_endpoint (by norm_num)
   simpa [BigOSpeedrun.Catalan.Endpoint, BigOSpeedrun.Catalan.constant,
     bound, catalan] using endpoint_of_decay hdecay
