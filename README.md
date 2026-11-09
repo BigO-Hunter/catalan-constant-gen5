@@ -122,3 +122,18 @@ The principal dependency is [slitsey/catalan-irrationality-measure](https://gith
 
 The project builds on [OpenAI's original irrationality proof](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Catalans-constant-is-irrational-September-24-2026) and the parameterized construction studied by [M. C. S. Carreira](https://github.com/MarcosCarreira/catalan-designs). See [NOTICE](NOTICE) and [LICENSE](LICENSE).
 
+---
+
+## Why this repo is up
+
+Reproducible verified evidence: a certified degree-130 inverse-image polynomial backing the written μ(G) ≤ 528.2327 bound — reusable in the community certificate chain.
+
+[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
+
+## What work can be done here
+
+The certificate is generated and checked. Open work: band narrowing toward the published 295 frontier; further use in the 1337isnot1337 chain.
+
+## License
+
+Licensed under Apache-2.0 — see [LICENSE](LICENSE)., with vendored portions named in [NOTICE](NOTICE.md) keeping their upstream licenses
