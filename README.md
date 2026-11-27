@@ -8,6 +8,8 @@ $$
 
 Precisely, $|G-p/q|>q^{-528.2315}$ for every integer $p$ and every sufficiently large positive integer $q$ (exact bound $1056463/2000$, GEN-6 repin). It improves the upstream $528.23288$ (verifier#87) and the leading listed claim $532$ on [Big O Speedrun](https://bigospeedrun.com/other/catalan); the earlier steps are indexed under [Proofs](#proofs).
 
+> Board (Nov 26 2026): this repo verifies μ(G) ≤ 528.2315 (Lean); the open race is currently led by S. Litsey's claimed μ(G) ≤ 270 (Nov 8) — see [bigospeedrun.com](https://bigospeedrun.com).
+
 This repository is a fork of [`1337isnot1337/catalan-constant`](https://github.com/1337isnot1337/catalan-constant) at `f90b5ab`. The single mathematical addition is the degree-130 inverse-image polynomial $P$, which is **generated** (a two-band Zolotarev-type construction by MultiAgency/darkhipo) rather than inherited, giving circle-certificate exponent $w=52.184216$ against $52.184351$ upstream. Everything else — the design $(58,9,3,5,3)$, determinant machinery, trial, trimmed support, residual certificate, near-field argument, scalar gates, CellCert engine and proof assembly — is upstream and unchanged (OpenAI's irrationality argument; S. Litsey's design and arithmetic profile; Cinna Davis's trimmed-support construction and certificate chain).
 
 ## Verification status
