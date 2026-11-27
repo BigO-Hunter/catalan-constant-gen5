@@ -3,7 +3,7 @@ import Submission.Refinement.Trimmed130Measure
 import Submission.Improvement.Trimmed130Decay
 
 /-!
-# Catalan irrationality-exponent bound 528.2327
+# Catalan irrationality-exponent bound 528.2315 (GEN-6: 1056463/2000)
 
 This entrypoint uses the unchanged Big O Speedrun target definition. The
 determinant estimate and the arithmetic normalization are proved in the imported

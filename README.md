@@ -5,12 +5,12 @@
 For Catalan's constant $G=\sum_{n\ge0}(-1)^n/(2n+1)^2$, this repository gives the written bound
 
 $$
-\boxed{\mu(G)\le 528.2327.}
+\boxed{\mu(G)\le 528.2315.}
 $$
 
-Precisely, $|G-p/q|>q^{-528.2327}$ for every integer $p$ and every sufficiently large positive integer $q$ (exact bound $5282327/10000$).
+Precisely, $|G-p/q|>q^{-528.2315}$ for every integer $p$ and every sufficiently large positive integer $q$ (exact bound $1056463/2000$, GEN-6 repin). The earlier GEN-5 bound $528.2327$ ($5282327/10000$) is superseded; its record is retained in [proofs/result_5282327.md](proofs/result_5282327.md).
 
-This repository is a fork of [`1337isnot1337/catalan-constant`](https://github.com/1337isnot1337/catalan-constant) at `f90b5ab`. The single mathematical addition is the degree-130 inverse-image polynomial $P$, which is **generated** (a two-band Zolotarev-type construction by MultiAgency/darkhipo) rather than inherited, giving circle-certificate exponent $w=52.184216$ against $52.184351$ upstream. Everything else — the design $(58,9,3,5,3)$, determinant machinery, trial, trimmed support, residual certificate, near-field argument, scalar gates, CellCert engine and proof assembly — is upstream and unchanged (OpenAI's irrationality argument; S. Litsey's design and arithmetic profile; Cinna Davis's trimmed-support construction and certificate chain). The full local kernel build is **complete** (4990 jobs; `Race.bound` depends only on `propext`, `Classical.choice`, `Quot.sound`). Submitted to the official verifier as [bigospeedrun/verifier#95](https://github.com/bigospeedrun/verifier/issues/95), pinned at commit [`e6e7bf6`](https://github.com/darkhipo/catalan-constant-gen5/commit/e6e7bf6797eddf2561798e76ca3f64cb67291f89). This is a **Claimed** result until the verifier accepts it. Details: [proofs/result_5282327.md](proofs/result_5282327.md).
+This repository is a fork of [`1337isnot1337/catalan-constant`](https://github.com/1337isnot1337/catalan-constant) at `f90b5ab`. The single mathematical addition is the degree-130 inverse-image polynomial $P$, which is **generated** (a two-band Zolotarev-type construction by MultiAgency/darkhipo) rather than inherited, giving circle-certificate exponent $w=52.184216$ against $52.184351$ upstream. Everything else — the design $(58,9,3,5,3)$, determinant machinery, trial, trimmed support, residual certificate, near-field argument, scalar gates, CellCert engine and proof assembly — is upstream and unchanged (OpenAI's irrationality argument; S. Litsey's design and arithmetic profile; Cinna Davis's trimmed-support construction and certificate chain). The full local kernel build is **complete** (4990 jobs; `Race.bound` depends only on `propext`, `Classical.choice`, `Quot.sound`). The GEN-6 bound is filed as [bigospeedrun/verifier#103](https://github.com/bigospeedrun/verifier/issues/103), pinned at commit [`47a36df5`](https://github.com/BigO-Hunter/catalan-constant-gen5/commit/47a36df5197a19e5f6378bd2043d41d0f516064d) — **Lean Verified** (run 41431550617); commits after the pin are docs/license only. The earlier GEN-5 bound $528.2327$ was filed as [verifier#95](https://github.com/bigospeedrun/verifier/issues/95) at [`e6e7bf6`](https://github.com/BigO-Hunter/catalan-constant-gen5/commit/e6e7bf6797eddf2561798e76ca3f64cb67291f89) (also Lean Verified, run 41356905042) and is superseded. Details: [proofs/result_5282327.md](proofs/result_5282327.md) (GEN-5 record, with supersession note).
 
 | Result | Upper bound |
 |---|---:|
@@ -20,7 +20,8 @@ This repository is a fork of [`1337isnot1337/catalan-constant`](https://github.c
 | Asymmetric polynomial quadrature, degree 53 | 530.6705 |
 | Asymmetric polynomial quadrature, degree 107 | 529.24599 |
 | Trimmed support, sharper eventual near field, degree 130 | 528.23288 |
-| Generated degree-130 polynomial (this repository) | **528.2327** |
+| Generated degree-130 polynomial, GEN-5 (verifier#95, Lean Verified) | 528.2327 |
+| GEN-6 repin of the scalar gates (this repository, verifier#103, Lean Verified) | **528.2315** |
 
 ## What changed
 
@@ -56,14 +57,16 @@ The argument relies on cited upstream mathematical theorems. The scripts check t
 
 ## Lean submission work
 
-**This repository (GEN-5).** The submitted candidate is pinned at [`e6e7bf6`](https://github.com/darkhipo/catalan-constant-gen5/commit/e6e7bf6797eddf2561798e76ca3f64cb67291f89). [Verifier submission #95](https://github.com/bigospeedrun/verifier/issues/95) was opened on November 1, 2026 with the exact rational bound `5282327/10000`. The verifier bot acknowledged receipt and the run is queued. The local kernel build of the exact submitted tree completed successfully (4990 jobs) and `Race.bound` depends only on `propext`, `Classical.choice`, `Quot.sound`. The [result record](proofs/result_5282327.md) lists the change surface and reproduction steps.
+**This repository (GEN-6, current).** The submitted candidate is pinned at [`47a36df5`](https://github.com/BigO-Hunter/catalan-constant-gen5/commit/47a36df5197a19e5f6378bd2043d41d0f516064d). [Verifier submission #103](https://github.com/bigospeedrun/verifier/issues/103) was opened with the exact rational bound `1056463/2000` (528.2315) and is **Lean Verified** (run 41431550617, closed 2026-11-02). The local kernel build of the exact submitted tree completed successfully (4990 jobs) and `Race.bound` depends only on `propext`, `Classical.choice`, `Quot.sound`.
+
+**GEN-5 (superseded).** The earlier candidate [`e6e7bf6`](https://github.com/BigO-Hunter/catalan-constant-gen5/commit/e6e7bf6797eddf2561798e76ca3f64cb67291f89) with bound `5282327/10000` (528.2327) was filed as [verifier#95](https://github.com/bigospeedrun/verifier/issues/95) on November 1, 2026 and is also Lean Verified (run 41356905042). The [GEN-5 result record](proofs/result_5282327.md) lists its change surface and reproduction steps.
 
 **Upstream history.** The earlier candidate of `1337isnot1337/catalan-constant` is pinned at [`3c45153`](https://github.com/1337isnot1337/catalan-constant/commit/3c4515314bda407d032cb55f60bfc56b03c1d3f9); [verifier submission #87](https://github.com/bigospeedrun/verifier/issues/87) was opened on October 30, 2026 with the exact rational bound `6602911/12500`. A separate automated derivation report compares file hashes, but **does not validate the proof**. The upstream [submission record](docs/submission-52823288.md) lists its exact fields and verification status.
 
 The frozen source has been submitted to the [Big O Speedrun verifier](https://github.com/bigospeedrun/verifier/issues/95).
 The new modules are under `Submission/Refinement/` and
 `Submission/Improvement/`. The entrypoint `Submission.lean` states
-`Race.bound : BigOSpeedrun.Catalan.Bound ((5282327 : ℚ) / 10000)`
+`Race.bound : BigOSpeedrun.Catalan.Bound ((1056463 : ℚ) / 2000)`
 with no remaining hypotheses. Its complete local kernel check passed.
 The verifier's canonical statement is copied unchanged
 to `Submission/CatalanStatement.lean`. `scripts/vendor_lean.py` copies only
@@ -72,7 +75,7 @@ required layout. The source manifest records original and converted hashes.
 
 The build configuration pins Lean 4.34.1 and the verifier's Mathlib revision.
 A submission pins a full source commit and the exact rational bound
-(here `5282327/10000`). The official check can run in parallel with the local rebuild.
+(here `1056463/2000`). The official check can run in parallel with the local rebuild.
 The written result, local kernel status, and official acceptance are tracked
 separately. A source-layout audit checks paths and hashes; it does not establish
 the mathematical theorem.
@@ -126,7 +129,7 @@ The project builds on [OpenAI's original irrationality proof](https://github.com
 
 ## Why this repo is up
 
-Reproducible verified evidence: a certified degree-130 inverse-image polynomial backing the written μ(G) ≤ 528.2327 bound — reusable in the community certificate chain.
+Reproducible verified evidence: a certified degree-130 inverse-image polynomial backing the written μ(G) ≤ 528.2315 bound (Lean Verified, verifier#103) — reusable in the community certificate chain.
 
 [BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
 
